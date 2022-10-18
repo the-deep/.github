@@ -59,24 +59,12 @@ This project contains a number of repositories which work together. Here is a li
 
 `git clone https://github.com/the-deep/deepl-deep-integration.git deepl-service`
 
-* Comment out pulling of images from docker.io in docker-compose.yml if you want to build from the source
-
-`#image: docker.pkg.github.com/the-deep/client:latest`
-
-`#image: docker.pkg.github.com/the-deep/ary-only-client:latest`
-
-`#image: docker.pkg.github.com/the-deep/client:latest`
-
-`#image: docker.pkg.github.com/the-deep/deepl-service:latest`
-
 * If you have a **Mac with M1 chip**, change the `deepl-service/Dockerfile` to specify amd64 platform in its FROM statement:
 
 `FROM --platform=linux/amd64 python:3.10-slim-buster`
 
 * If you are on a **Mac**, you have to turn off 'Airplay Reciever' from 'System Preferences > Sharing' to make port 5000 available for use.
 * Use docker-compose to start the servers (Install latest docker and docker-compose, if they are not installed)
-
-`docker-compose pull`
 
 `docker-compose build`
 
