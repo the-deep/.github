@@ -45,19 +45,26 @@ This project contains a number of repositories which work together. Here is a li
 # Installation Instructions
 * Clone deeper repo
 
-`git clone https://github.com/the-deep/deeper.git deep-project-root`
+```bash
+git clone https://github.com/the-deep/deeper.git deep-project-root
+```
 * Go to deeper project root
 
-`cd deep-project-root`
+```bash
+cd deep-project-root
+```
 * Clone client, server and other repos
 
-`git clone https://github.com/the-deep/server.git server`
-
-`git clone https://github.com/the-deep/client.git client`
-
-`git clone --branch=feature/only-ary https://github.com/the-deep/client.git ./ary-only-client`
-
-`git clone https://github.com/the-deep/deepl-deep-integration.git deepl-service`
+```bash
+# Server
+git clone https://github.com/the-deep/server.git server
+# Client
+git clone https://github.com/the-deep/client.git client
+# Client (ARY)
+git clone --branch=feature/only-ary https://github.com/the-deep/client.git ./ary-only-client
+# Deepl services
+git clone https://github.com/the-deep/deepl-deep-integration.git deepl-service
+```
 
 * If you have a **Mac with M1 chip**, change the `deepl-service/Dockerfile` to specify amd64 platform in its FROM statement:
 
@@ -66,31 +73,24 @@ This project contains a number of repositories which work together. Here is a li
 * If you are on a **Mac**, you have to turn off 'Airplay Reciever' from 'System Preferences > Sharing' to make port 5000 available for use.
 * Use docker-compose to start the servers (Install latest docker and docker-compose, if they are not installed)
 
-`docker-compose build`
-
-`docker-compose up`
+```bash
+docker-compose build
+docker-compose up
+```
 
 # Useful Commands
 * To migrate, go to the docker container and run migrate command:
 
-`docker-compose exec web bash`
-
-`./manage.py migrate`
+```bash
+docker-compose exec web ./manage.py migrate
+```
 
 * To test, go to the docker container and run the test command:
 
-
-`docker-compose exec web bash`
-
-`./manage.py test`
+```bash
+docker-compose exec web ./manage.py test
+```
 
 # Useful Links:
 * [Userguide](https://deephelp.zendesk.com/hc/en-us)
 * [DEEP website](https://app.thedeep.io/)
-
-
-
-
-
-
-
